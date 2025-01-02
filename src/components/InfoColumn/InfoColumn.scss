@@ -1,0 +1,72 @@
+.pos {
+    position: absolute;
+    top: 2vh;
+}
+.info-column {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 235, 235, 0);
+
+    img {
+        height: 80%;
+        object-fit: cover;
+        opacity: 0.6;
+    }
+
+    // 内容部分
+    .info-content {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 0%;
+        left: 0%;
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+        }
+        h1 {
+            @extend.pos;
+            top: 4vh;
+            left: 3vw;
+            font: {
+                size: 3rem;
+                family: "楷体"
+            };
+            color: #ede3e3
+        }
+        .term {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @extend.pos;
+            top: 100%;
+            left: 60%;
+            color: #ede3e3;
+            font: {
+                size: 1.5rem;
+                family: "黑体"
+            };
+            i {
+                margin-right: 0.5vw;
+            }
+            li {
+                margin: {
+                    right: 2vw;
+                }
+                list-style: none;
+            }
+            span {
+                &:hover {
+                    cursor: pointer;
+                    color: #7886d6;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+}

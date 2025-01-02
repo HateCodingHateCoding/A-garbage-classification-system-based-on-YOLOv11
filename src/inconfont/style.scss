@@ -1,0 +1,35 @@
+@import url(./iconfont.css);
+
+.fontstyle {
+    font: {
+        size: 1.5rem;
+    }
+    color: #ccc;
+}
+
+.icon-375 {
+    font: {
+        size: 3rem;
+    }
+    color: rgb(243, 243, 242);
+}
+
+.icon-xinxi {
+    @extend.fontstyle;
+}
+  
+.icon-jishufuwu {
+    @extend.fontstyle;
+}
+
+.icon-tuandui {
+    @extend.fontstyle;
+}
+
+.icon-logo {
+    @extend.fontstyle;
+}
+
+.icon-geren {
+    @extend.fontstyle;
+}

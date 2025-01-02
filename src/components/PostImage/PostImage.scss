@@ -1,0 +1,75 @@
+.column {
+    margin-top: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .characters {
+        margin-right: 0.2vw;
+        font: {
+            size: 2.5vw;
+            family: '楷体';
+        }
+    }
+    .input {
+        display: none;
+    }
+    .input-file-button {
+        height: 3.5vw;
+        text-align: center;
+        color: #3312d9;
+        line-height: 3.5vw;
+        margin-right: 4vw;
+        width: 15%;
+        padding-left: 5px;
+        text-decoration: underline;
+        font: {
+            size: 2vw;
+            family: '宋体';
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: #ccc;
+        }
+    }
+    .post-btn {
+        position: absolute;
+        top:100%;
+        background-color: skyblue;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 3.5vw;
+        font: {
+            size: 2vw;
+            family: '宋体';
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: #ccc;
+            text-decoration: underline;
+        }
+    }
+    .file-name {
+        position: absolute;
+        top: 60%;
+        margin-right: 1vw;
+        height: 3.5vw;
+        line-height: 3.5vw; 
+        word-wrap: break-word; 
+        display: -webkit-box; 
+        overflow: hidden; 
+        font: {
+            size: 1vw;
+            family: '宋体';
+        }
+        text-decoration: underline;
+        color: #3c3fe5;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
+
+
+

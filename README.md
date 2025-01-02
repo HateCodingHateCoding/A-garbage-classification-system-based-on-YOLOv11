@@ -1,8 +1,50 @@
-# A-garbage-classification-system-based-on-YOLOv11
-A garbage classification system based on YOLOv11
+# React + TypeScript + Vite
 
-Model: YOLOv11 is used, with Python 3.13 as the programming language, PyTorch 2.0.1+ as the deep learning framework, CUDA 11.7+ as the parallel computing platform, CUDNN 8500+ as the deep learning GPU acceleration library, and numpy 1.26.2 as the scientific computing library.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Front-end: Developed using VsCode 1.96, based on the react-ts framework (react + typescript) with vite.
+Currently, two official plugins are available:
 
-Back-end: Developed using Pycharm Professional 2024.3.1.1, based on the Flask framework.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
+
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
